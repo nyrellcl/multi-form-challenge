@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/multi-form-challenge/static/css/main.6266fd64.css",
-    "main.js": "/multi-form-challenge/static/js/main.aa5811b0.js",
+    "main.css": "/multi-form-challenge/static/css/main.906518a0.css",
+    "main.js": "/multi-form-challenge/static/js/main.ffcf8923.js",
     "static/js/787.bf36a60c.chunk.js": "/multi-form-challenge/static/js/787.bf36a60c.chunk.js",
     "static/media/bg-sidebar-mobile.svg": "/multi-form-challenge/static/media/bg-sidebar-mobile.ad41661b40ca0b967f3a.svg",
     "index.html": "/multi-form-challenge/index.html",
-    "main.6266fd64.css.map": "/multi-form-challenge/static/css/main.6266fd64.css.map",
-    "main.aa5811b0.js.map": "/multi-form-challenge/static/js/main.aa5811b0.js.map",
+    "main.906518a0.css.map": "/multi-form-challenge/static/css/main.906518a0.css.map",
+    "main.ffcf8923.js.map": "/multi-form-challenge/static/js/main.ffcf8923.js.map",
     "787.bf36a60c.chunk.js.map": "/multi-form-challenge/static/js/787.bf36a60c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6266fd64.css",
-    "static/js/main.aa5811b0.js"
+    "static/css/main.906518a0.css",
+    "static/js/main.ffcf8923.js"
   ]
 }
