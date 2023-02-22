@@ -9,7 +9,7 @@ function Personal() {
                     <p> Please provide your name, email address, and phone number.</p>
 
                 </div>
-                <form className='info-container'>
+                <form className='info-container' method='post'>
                     <label htmlFor='name'>Name</label>
                     <input required name="name" id="name" placeholder='e.g. Stephen King' />
 

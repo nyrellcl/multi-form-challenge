@@ -19,7 +19,7 @@ function App() {
 
       <Personal />
       <div className="submit-container">
-        <button type="button" className='submit-container__btn'>Next</button>
+        <input type="submit" value="Next" className='submit-container__btn'/>
       </div>
 
     </main>
