@@ -18,11 +18,7 @@ function Personal() {
 
                     <label htmlFor='phone'>Phone Number</label>
                     <input required name="phone" id="phone" placeholder='e.g. +1 234 567 890' />
-                    <div className="submit-container">
-                        <button type="button">Next</button>
-                    </div>
                 </form>
-
             </article>
         </section>
     )

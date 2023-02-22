@@ -20,6 +20,21 @@ body{
     height: 100vh;
 }
 
+.submit-container{
+    width: 100%;
+    background: $white;
+    height: rem(72);
+    padding: rem(16) rem(16) rem(16) 70%;
+    &__btn{
+        width: rem(97);
+        height: rem(40);
+        font-weight: 500;
+        color: $white;
+        border-radius: rem(4);
+        background: $marine-blue;
+        border: none;
+    }
+}
 .header-container{
     width: 100%;
     background-image: url('../../public/assets/images/bg-sidebar-mobile.svg');

@@ -1,23 +1,26 @@
 import "./index-sass/index.css";
-import React, {useState} from "react";
+import React, { useState } from "react";
 import Personal from "./components/Personal";
 
 
 function App() {
-  const [pagination] = useState([1,2,3,4]);
+  const [pagination] = useState([1, 2, 3, 4]);
 
   return (
     <main className="App">
       <header className="header-container">
-          <aside className="pagination-bar">
-            {pagination.map((paginations,idx)=>(
-              <span key={idx}>{paginations}</span>
+        <aside className="pagination-bar">
+          {pagination.map((paginations, idx) => (
+            <span key={idx}>{paginations}</span>
 
-            ))}
-            </aside>
+          ))}
+        </aside>
       </header>
-      
-        <Personal/>
+
+      <Personal />
+      <div className="submit-container">
+        <button type="button" className='submit-container__btn'>Next</button>
+      </div>
 
     </main>
   );
