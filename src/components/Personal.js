@@ -1,6 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function Personal() {
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [phoneNumber, setPhoneNumber] = useState("");
+
     return (
         <section className="personal-container">
             <article className='personal-container__card'>
@@ -11,13 +15,13 @@ function Personal() {
                 </div>
                 <form className='info-container' method='post'>
                     <label htmlFor='name'>Name</label>
-                    <input required name="name" id="name" placeholder='e.g. Stephen King' />
+                    <input required onChange={(e) => setName(e.currentTarget.value)} value={name} name="name" id="name" placeholder='e.g. Stephen King' />
 
                     <label htmlFor='email'>Email address</label>
-                    <input required name="email" id="email" placeholder='e.g. stephenking@lorem.com' />
+                    <input required onChange={(e) => setEmail(e.currentTarget.value)} value={email} type="email" name="email" id="email" placeholder='e.g. stephenking@lorem.com' />
 
                     <label htmlFor='phone'>Phone Number</label>
-                    <input required name="phone" id="phone" placeholder='e.g. +1 234 567 890' />
+                    <input required onChange={(e) => setPhoneNumber(e.currentTarget.value)} value={phoneNumber} name="phone" id="phone" placeholder='e.g. +1 234 567 890' />
                 </form>
             </article>
         </section>
