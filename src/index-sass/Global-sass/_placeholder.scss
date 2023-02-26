@@ -1,0 +1,14 @@
+@import "./colors", "./function";
+
+%cards{
+    width: 90%;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%);
+    border-radius: rem(10);
+    top:rem(99);
+    background-color: $white;
+    filter: drop-shadow(0 rem(25) rem(40) hsla(0, 0%, 0%, 0.1));
+}

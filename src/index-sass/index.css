@@ -1,3 +1,16 @@
+.add-container, .plan-container, .personal-container__card {
+  width: 90%;
+  margin: 0 auto;
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%);
+  border-radius: 0.625rem;
+  top: 6.1875rem;
+  background-color: hsl(0deg, 0%, 100%);
+  filter: drop-shadow(0 1.5625rem 2.5rem hsla(0deg, 0%, 0%, 0.1));
+}
+
 #root {
   font-family: "Ubuntu", sans-serif;
 }
@@ -10,6 +23,24 @@
 
 body {
   min-width: 23.4375rem;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: hsl(213deg, 96%, 18%);
+  margin-bottom: 0.5625rem;
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+p {
+  line-height: 1.5625rem;
+  font-weight: 400;
+  color: hsl(231deg, 11%, 63%);
 }
 
 .App {
@@ -37,7 +68,7 @@ body {
 
 .header-container {
   width: 100%;
-  background-image: url("../../public/assets/images/bg-sidebar-mobile.svg");
+  background-image: url("../assets/images/bg-sidebar-mobile.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -73,31 +104,10 @@ body {
   background-color: hsl(231deg, 100%, 99%);
 }
 .personal-container__card {
-  width: 90%;
-  margin: 0 auto;
-  position: absolute;
   height: 23.5rem;
-  left: 50%;
-  right: 50%;
-  transform: translate(-50%);
-  border-radius: 0.625rem;
-  top: 6.1875rem;
-  background-color: hsl(0deg, 0%, 100%);
-  filter: drop-shadow(0 1.5625rem 2.5rem hsla(0deg, 0%, 0%, 0.1));
 }
 .personal-container__card__content {
   padding: 2rem 1.5rem 1.375rem;
-}
-.personal-container__card__content h1 {
-  font-weight: 700;
-  font-size: 1.5rem;
-  color: hsl(213deg, 96%, 18%);
-  margin-bottom: 0.5625rem;
-}
-.personal-container__card__content p {
-  line-height: 1.5625rem;
-  font-weight: 400;
-  color: hsl(231deg, 11%, 63%);
 }
 .personal-container__card .info-container {
   padding: 0 1.5rem 2rem;
@@ -110,4 +120,99 @@ body {
   border: 0.0625rem solid hsl(231deg, 11%, 63%);
   padding-left: 1rem;
   margin-bottom: 1rem;
+}
+
+.plan-container__card {
+  padding: 1.5rem;
+}
+.plan-container__card__content {
+  margin-bottom: 1.375rem;
+}
+.plan-container__card__content p {
+  line-height: 1.5625rem;
+}
+.plan-container .subscription-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.plan-container .subscription-container .plans {
+  border: 1px solid hsl(229deg, 24%, 87%);
+  border-radius: 0.5rem;
+  height: 100%;
+  display: flex;
+  gap: 0.875rem;
+  align-items: center;
+  padding-left: 1rem;
+  padding-top: 0.875rem;
+  padding-bottom: 1.125rem;
+}
+.plan-container .subscription-container .plans__content {
+  height: 4.25rem;
+  width: 4.8125rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.4375rem;
+  line-height: 1.125rem;
+}
+.plan-container .subscription-container .plans__content p {
+  font-size: 0.875rem;
+}
+.plan-container .subscription-container .plans__content .yearly-two {
+  color: hsl(213deg, 96%, 18%);
+  font-size: 0.75rem;
+}
+.plan-container .subscription-container .plans.selected {
+  border: 1px solid hsl(243deg, 100%, 62%);
+  background-color: hsl(231deg, 100%, 99%);
+}
+.plan-container .input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 0.875rem 3.5rem;
+  background-color: hsl(231deg, 100%, 99%);
+  border-radius: 0.5rem;
+}
+.plan-container .input-container input {
+  position: relative;
+  width: 2.375rem;
+  height: 1.25rem;
+  background-color: hsl(213deg, 96%, 18%);
+  border-radius: 0.625rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  transition: all 250ms ease-in;
+}
+.plan-container .input-container input::before, .plan-container .input-container input::after {
+  content: "";
+  position: absolute;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background-color: hsl(0deg, 0%, 100%);
+  transform: translate(15%, 30%);
+}
+.plan-container .input-container input::after {
+  opacity: 0;
+}
+.plan-container .input-container input[type=checkbox]:checked::before {
+  opacity: 0;
+}
+.plan-container .input-container input[type=checkbox]:checked {
+  background-color: hsl(243deg, 100%, 62%);
+}
+.plan-container .input-container input[type=checkbox]:checked::after {
+  opacity: 100%;
+  left: 57%;
+}
+
+.add-container__card {
+  padding: 1.5rem;
+}
+.add-container__card__content {
+  margin-bottom: 1.375rem;
 }/*# sourceMappingURL=index.css.map */

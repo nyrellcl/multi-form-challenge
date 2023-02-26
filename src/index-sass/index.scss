@@ -1,6 +1,6 @@
 @use "sass:math";
 
-@import "./Global-sass/function", "./Global-sass/colors";
+@import "./Global-sass/function", "./Global-sass/colors", "./Global-sass/placeholder";
 
 #root{
     font-family: 'Ubuntu', sans-serif;
@@ -15,6 +15,25 @@
 body{
     min-width: rem(375);
 }
+
+h1{
+    font-weight: 700;
+    font-size: rem(24);
+    color: $marine-blue;
+    margin-bottom: rem(9);
+}
+
+h2{
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+p{
+    line-height: rem(25);
+    font-weight: 400;
+    color: $cool-grey;
+}
+
 
 .App{
     height: 80vh;
@@ -40,7 +59,7 @@ body{
 }
 .header-container{
     width: 100%;
-    background-image: url('../../public/assets/images/bg-sidebar-mobile.svg');
+    background-image: url('../assets/images/bg-sidebar-mobile.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -75,30 +94,10 @@ body{
     height: 100%;
     background-color: $alabaster;
     &__card{
-        width: 90%;
-        margin: 0 auto;
-        position: absolute;
+        @extend %cards;
         height: rem(376);
-        left: 50%;
-        right: 50%;
-        transform: translate(-50%);
-        border-radius: rem(10);
-        top:rem(99);
-        background-color: $white;
-        filter: drop-shadow(0 rem(25) rem(40) hsla(0, 0%, 0%, 0.1));
         &__content{
             padding: rem(32) rem(24) rem(22);
-            h1{
-                font-weight: 700;
-                font-size: rem(24);
-                color: $marine-blue;
-                margin-bottom: rem(9);
-            }
-            p{
-                line-height: rem(25);
-                font-weight: 400;
-                color: $cool-grey;
-            }
         }
         .info-container{
             padding: 0 rem(24) rem(32);
@@ -114,3 +113,108 @@ body{
         }
     }
 }
+
+.plan-container{
+    @extend %cards;
+    &__card{
+        padding: rem(24);
+        &__content{
+            margin-bottom: rem(22);
+            p{
+                line-height: rem(25);
+            }
+        }
+    }
+    .subscription-container{
+        display: flex;
+        flex-direction: column;
+        gap: rem(12);
+        .plans{
+            border: 1px solid $light-grey;
+            border-radius: rem(8);
+            height: 100%;
+            display: flex;
+            gap: rem(14);
+            align-items: center;
+            padding-left: rem(16);
+            padding-top: rem(14);
+            padding-bottom: rem(18);
+            &__content{
+                height: rem(68);
+                width: rem(77);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap:rem(7);
+                line-height: rem(18);
+                p{
+                    font-size: rem(14);
+                }
+                .yearly-two{
+                    color: $marine-blue;
+                    font-size: rem(12);
+                }
+            }
+        }
+        .plans.selected{
+            border: 1px solid $purplish-blue;
+            background-color: $alabaster;
+        }
+    }
+
+    .input-container{
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+        gap: rem(24);
+        padding: rem(14) rem(56);
+        background-color: $alabaster;
+        border-radius: rem(8);
+        input{
+            position: relative;
+            width: rem(38);
+            height: rem(20);
+            background-color: $marine-blue;
+            border-radius: rem(10);
+            appearance: none;
+            transition: all 250ms ease-in;
+            &::before, &::after{
+                content: "";
+                position: absolute;
+                width: rem(12);
+                height: rem(12);
+                border-radius: 50%;
+                background-color: $white;
+                transform: translate(15%, 30%);
+            }
+            &::after{
+                opacity: 0;
+            }
+            &[type="checkbox"]:checked{
+                &::before{
+                    opacity: 0;
+                }
+            }
+            &[type="checkbox"]:checked{
+                background-color: $purplish-blue;
+             &::after{
+                opacity: 100%;
+                left: 57%;
+            }
+                
+        }    
+        }
+    }
+}
+
+.add-container{
+    @extend %cards;
+    &__card{
+        padding: rem(24);
+        &__content{
+            margin-bottom: rem(22);
+
+        }
+    }
+}
+
